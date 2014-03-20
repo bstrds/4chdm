@@ -21,4 +21,10 @@ After this, you have a '4chdata' directory full of .words files, one for each th
 
 I create word clouds using the 'all.dat' file and this: https://github.com/amueller/word_cloud
 
+For now, I'm focusing on the /mu/ board. Here are some word cloud examples: 
+
+![Alt text](mu2.png)
+
+![Alt text](mu4.png)
+
 That's all for the moment :3
