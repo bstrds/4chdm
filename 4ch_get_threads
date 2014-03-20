@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+curl http://a.4cdn.org/mu/threads.json | \
+	sed 's_\,_\n_g' | \
+	sed 's/.last.*//' | \
+	sed 's/..page.*//' | \
+	sed 's/.threads...//' | \
+	sed 's/..no..//' | \
+	sed 's/\[//' | \
+	sed 's/^3.*//' | \
+	sed '/^\s*$/d' \
+	> muthreads && ~/4ch_threadloop

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+curl http://a.4cdn.org/mu/res/$1.json | \
+	sed 's/"\,"/\n/g' | \
+	grep 'com":' | \
+	sed 's/^com.:"//' | \
+	sed "s/\&\#039\;/\'/g" | \
+	sed 's/<br>//g' | \
+	sed 's/<span.................\&gt./>/g' | \
+	sed 's_<\\/span>__g' | \
+	sed 's/\&gt;/ >/g' | \
+	sed 's/<a .*>//g' | \
+	sed 's/<wbr//g' \
+	> 4chdata/$1.words

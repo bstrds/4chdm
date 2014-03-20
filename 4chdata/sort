@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Sorts the output of final with descending order.
+
+sort -t$'\t' -k2 -nr final.dat > gg.dat

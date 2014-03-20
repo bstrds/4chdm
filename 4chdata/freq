@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+cat all.dat | \
+	tr ' ' '\n' | \
+	sort | \
+	uniq -c | \
+	awk '{print $2"\t"$1}' \
+	> freq.dat

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+while read line; do
+  ~/4ch_gettext $line
+done < muthreads
+

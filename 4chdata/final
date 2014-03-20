@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Removes words with one, two and three occurences, stores changes in 'final.dat'
+
+cat freq.dat | \
+	sed '/.*\t1$/d' | \
+	sed '/.*\t2$/d' | \
+	sed '/.*\t3$/d' \
+	> final.dat
