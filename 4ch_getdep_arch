@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "Installing  python and python-pip..."
-sudo pacman -S python-pip python curl unzip
+sudo pacman -S python-pip python curl unzip wget
 echo "Done"
 
 mkdir ~/.fonts
