@@ -9,4 +9,4 @@ curl http://a.4cdn.org/mu/threads.json | \
 	sed 's/\[//' | \
 	sed 's/^3.*//' | \
 	sed '/^\s*$/d' \
-	> muthreads && 4ch_threadloop
+	> muthreads && ./4ch_threadloop
