@@ -15,7 +15,7 @@ from PIL import ImageDraw
 from PIL import ImageFont
 from query_integral_image import query_integral_image
 
-FONT_PATH = "/home/gkyp/.fonts/CL.ttf"
+FONT_PATH = ".fonts/CL.ttf"
 STOPWORDS = set([x.strip() for x in open(os.path.join(os.path.dirname(__file__),
         'stopwords')).read().split('\n')])
 
