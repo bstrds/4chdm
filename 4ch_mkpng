@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 cd ~/4chdata
-./get && ../mkcloud.py
+./get && ../mkcloud.py mu`date +%s`.png

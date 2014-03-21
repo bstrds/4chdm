@@ -13,5 +13,5 @@ words = wordcloud.process_text(text, max_features=1000)
 # Compute the position of the words.
 elements = wordcloud.fit_words(words, width=1000, height=1000)
 # Draw the positioned words to a PNG file.
-wordcloud.draw(elements, path.join(d, 'mu4.png'), width=1000, height=1000,
+wordcloud.draw(elements, path.join(d, str(sys.argv[1])), width=1000, height=1000,
         scale=2)
