@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
 echo "Installing  python and python-pip..."
-sudo apt-get install python-pip python
+sudo apt-get install python-pip python curl
 echo "Done"
+
+mkdir ~/.fonts
+cp .fonts/*.ttf ~/.fonts/
 
 echo "Getting dependencies..."
 wget https://github.com/amueller/word_cloud/archive/master.zip
@@ -14,3 +17,7 @@ echo "Done"
 echo "Installing required stuff..."
 sudo pip install -r requirements.txt
 echo "Done"
+
+curl https://raw.githubusercontent.com/bstrds/4chdm/master/__init__.py > wordcloud/__init__.py
+
+sudo python setup.py install
