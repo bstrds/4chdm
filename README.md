@@ -23,7 +23,7 @@ I create word clouds using the 'all.dat' file and this: https://github.com/amuel
 
 For now, I'm focusing on the /mu/ board. Here are some word cloud examples: 
 
-![Alt text](mu2.png)
+![Alt text](mu1395402189.png)
 
 ![Alt text](mu4.png)
 
