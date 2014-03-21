@@ -20,4 +20,6 @@ echo "Done"
 
 curl https://raw.githubusercontent.com/bstrds/4chdm/master/__init__.py > wordcloud/__init__.py
 
+sed 's_DUMDUMDUM_/home/'"`echo $USER`"'/.fonts_'
+
 sudo python setup.py install
