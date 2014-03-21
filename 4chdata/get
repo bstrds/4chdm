@@ -1,22 +1,19 @@
 #!/usr/bin/env bash
 
-# Reads all words from all the files we got, and performs some subtitutions
-# and deletions to bring the text to a form we want.
-
 cat *.words | \
-	tr '[:upper:]' '[:lower:]' | \	# Makes everything lowercase.
-	tr ' ' '\n' | \			# Replaces each space with a newline.
-	sed 's/\.//' | \		# Removes all dots.
-	sed 's_\\/__' | \		# Removes this \/ (probably).
-	sed '/^[0-9]/d' | \		# Deletes every line starting with a number
-	sed '/http:/d' | \		# Deletes every line with a URL.
-	sed '/https:/d' | \		# Same, for https.
-	sed 's/\,//' | \		# Removes commas.
-	sed 's/\&quot;//g' | \		# Removes &quot;
-	sed 's/\&amp;//g' | \		# Removes &amp;
-	sed 's/>/\n>/g' | \		# Places a newline before this >.
-	sed 's/<span//g' | \		# Removes <span.
-	sed 's/\?//g' | \		# Removes question marks.
-	sed 's/\&lt;//g' | \		# Removes &lt;
+	tr '[:upper:]' '[:lower:]' | \
+	tr ' ' '\n' | \
+	sed 's/\.//' | \
+	sed 's_\\/__' | \
+	sed '/^[0-9]/d' | \
+	sed '/http:/d' | \
+	sed '/https:/d' | \
+	sed 's/\,//' | \
+	sed 's/\&quot;//g' | \
+	sed 's/\&amp;//g' | \
+	sed 's/>/\n>/g' | \
+	sed 's/<span//g' | \
+	sed 's/\?//g' | \
+	sed 's/\&lt;//g' \
 	> all.dat						
 
