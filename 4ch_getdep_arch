@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+echo "Installing  python and python-pip..."
+sudo pacman -S python-pip python curl unzip
+echo "Done"
+
+mkdir ~/.fonts
+cp .fonts/*.ttf ~/.fonts/
+
+echo "Getting dependencies..."
+wget https://github.com/amueller/word_cloud/archive/master.zip
+unzip master.zip
+rm master.zip
+cd word_cloud-master
+echo "Done"
+
+echo "Installing required stuff..."
+sudo pip install -r requirements.txt
+echo "Done"
+
+cat ../__init__.py > wordcloud/__init__.py
+
+sed -i 's_DUMDUMDUM_/home/'"`echo $USER`"'/.fonts_' wordcloud/__init__.py
+
+sudo python setup.py install
+
