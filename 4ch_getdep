@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "Installing  python and python-pip..."
-sudo apt-get install python-pip python curl unzip wget
+sudo apt-get install python-pip python curl unzip wget cython
 echo "Done"
 
 mkdir ~/.fonts
