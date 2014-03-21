@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+echo "Installing  python and python-pip..."
+sudo apt-get install python-pip python
+echo "Done"
+
+echo "Getting dependencies..."
+wget https://github.com/amueller/word_cloud/archive/master.zip
+unzip master.zip
+rm master.zip
+cd word_cloud-master
+echo "Done"
+
+echo "Installing required stuff..."
+sudo pip install -r requirements.txt
+echo "Done"
